@@ -6,7 +6,7 @@
   <link href="http://blog.chenchaoshen.com/atom.xml" rel="self"/>
   
   <link href="http://blog.chenchaoshen.com/"/>
-  <updated>2020-09-08T09:11:19.226Z</updated>
+  <updated>2020-09-09T01:42:38.799Z</updated>
   <id>http://blog.chenchaoshen.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello world</title>
-    <link href="http://blog.chenchaoshen.com/2020/09/08/hello-world-1/"/>
-    <id>http://blog.chenchaoshen.com/2020/09/08/hello-world-1/</id>
-    <published>2020-09-08T07:27:26.000Z</published>
-    <updated>2020-09-08T09:11:19.226Z</updated>
+    <title>friends</title>
+    <link href="http://blog.chenchaoshen.com/2020/09/08/hello-world/"/>
+    <id>http://blog.chenchaoshen.com/2020/09/08/hello-world/</id>
+    <published>2020-09-08T07:19:03.800Z</published>
+    <updated>2020-09-09T01:42:38.799Z</updated>
     
     
       
@@ -30,27 +30,6 @@
         
     <summary type="html">&lt;h1 id=&quot;🗿-HEAD&quot;&gt;&lt;a href=&quot;#🗿-HEAD&quot; class=&quot;headerlink&quot; title=&quot;🗿 HEAD&quot;&gt;&lt;/a&gt;🗿 HEAD&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;A list of everything that *could* go</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://blog.chenchaoshen.com/2020/09/08/hello-world/"/>
-    <id>http://blog.chenchaoshen.com/2020/09/08/hello-world/</id>
-    <published>2020-09-08T07:19:03.800Z</published>
-    <updated>2020-09-08T07:19:03.800Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
