@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>demo</title>
+    <title>小工具链接</title>
     <url>/2020/09/10/demo/</url>
     <content><![CDATA[<ul>
 <li>打飞机（插件小游戏）: <a href="https://kickassapp.com/">https://kickassapp.com/</a> </li>
@@ -27,10 +27,16 @@
 <li>微信有道云版本（界面和有道云一样，看着像在记录笔记）：<a href="https://wx.qq.com/">https://wx.qq.com/</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>在线工具</category>
+      </categories>
+      <tags>
+        <tag>others</tag>
+      </tags>
   </entry>
   <entry>
-    <title>friends</title>
-    <url>/2020/09/08/hello-world/</url>
+    <title>HEAD标签梳理</title>
+    <url>/2020/09/10/hello-world/</url>
     <content><![CDATA[<h1 id="🗿-HEAD"><a href="#🗿-HEAD" class="headerlink" title="🗿 HEAD"></a>🗿 HEAD</h1><blockquote>
 <p>A list of everything that *could* go in the <code>&lt;head&gt;</code> of your document</p>
 </blockquote>
@@ -260,5 +266,11 @@
 <h2 id="📝-License"><a href="#📝-License" class="headerlink" title="📝 License"></a>📝 License</h2><p><a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0"></a></p>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
   </entry>
 </search>
