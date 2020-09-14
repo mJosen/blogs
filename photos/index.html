@@ -155,7 +155,7 @@
     app_key: "cDRjnA022FYxCdOFgXkNsgAI",
     path: window.location.pathname,
     avatar: "monsterid",
-    placeholder: "路过~",
+    placeholder: "丢个炸弹~",
     recordIP: true,
   });
   const infoEle = document.querySelector("#vcomments .info");
@@ -190,7 +190,95 @@
 </style>
 
  
-   
+    
+<!-- minivaline评论 -->
+<div id="mvcomments-box">
+  <div id="mvcomments"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/minivaline@2/dist/MiniValine.min.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'qcqDprBlKVoTSskLcEpInEIE-gzGzoHsz',
+        appKey: 'cDRjnA022FYxCdOFgXkNsgAI',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+  const infoEle = document.querySelector('#mvcomments .info');
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+      infoEle.childNodes.forEach(function (item) {
+          item.parentNode.removeChild(item);
+      });
+  }
+</script>
+<style>
+	#mvcomments-box {
+	padding: 5px 30px;
+	}
+
+	@media screen and (max-width: 800px) {
+	#mvcomments-box {
+	  padding: 5px 0px;
+	}
+	}
+
+	.v .vlist .vcard .vh {
+	padding-right: 20px;
+	}
+
+	.v .vlist .vcard {
+	padding-left: 10px;
+	}
+	
+	.darkmode .commentTrigger{
+		background-color: #403e3e !important;
+	  }
+	.darkmode .MiniValine .vpage .more{
+		background: #21232F
+	}
+	.darkmode img{
+		  filter: brightness(30%)
+	}
+	.darkmode .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment.expand:before{
+		background: linear-gradient(180deg, rgba(246,246,246,0), rgba(0,0,0,0.9))
+	}
+	.darkmode .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment.expand:after{
+		background: rgba(0,0,0,0.9)
+	}
+	.darkmode .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment pre{
+		background: #282c34
+		border: 1px solid #282c34
+	}
+	.darkmode .MiniValine .vinputs-area .textarea-wrapper textarea{
+		color: #000;
+	}
+	.darkmode .MiniValine .vinputs-area .auth-section .input-wrapper input{
+		color: #000;
+	}
+	.darkmode .MiniValine .info .col .count{
+		color: #000;
+	}
+	.darkmode .MiniValine .vinputs-area .vextra-area .vsmile-icons{
+		background: transparent;
+	}
+</style>
+
+ 
 </article>
 
 </section>
@@ -466,7 +554,40 @@
 
 <!-- MathJax -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
 <!-- Katex -->
+
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+    
+
 
 <!-- busuanzi  -->
 
@@ -544,6 +665,23 @@
 <!-- CanvasBackground -->
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=66"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
   </div>
 </body>
