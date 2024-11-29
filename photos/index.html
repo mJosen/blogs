@@ -31,9 +31,11 @@
   
   
 <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js
+"></script>
 
-  
-  
 
   
 
@@ -58,13 +60,14 @@
   <div class="article-inner">
     
     <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  脑脊液指标
-</h1>
+            
+      <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+        脑脊液指标
+      </h1>
  
 
     </header>
+    <div id="chartDom" style="width: 100%; height: 90vw;"></div>
        
     <div class="article-entry" itemprop="articleBody">
       
@@ -551,7 +554,215 @@
     }
     viewer_init()
 </script>
+<script>
+  var chartDom = document.getElementById('chartDom');
+var myChart = echarts.init(chartDom);
+var option;
 
+option = {
+  legend: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      crossStyle: {
+        color: '#999'
+      }
+    }
+  },
+  xAxis: {
+    type: 'time',
+    splitLine: {
+      show: false
+    },
+    axisLabel: {
+      formatter: (value, index) => {
+        const getFormatTime = (stamp) => {
+          let year = new Date(stamp).getFullYear();
+          let month = new Date(stamp).getMonth() + 1;
+          month = month < 10 ? '0' + month : month;
+          let date = new Date(stamp).getDate();
+          date = date < 10 ? '0' + date : date;
+          return month + '-' + date;
+        };
+
+        let dateTime = getFormatTime(value);
+        return dateTime;
+      }
+    }
+  },
+  yAxis: {
+    type: 'value',
+    splitLine: {
+      show: false
+    }
+  },
+  series: [
+    {
+      name: '细胞总数(<12)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 293],
+        [new Date('2023-11-17').getTime(), 652],
+        [new Date('2023-11-15').getTime(), 1029],
+        [new Date('2023-11-13').getTime(), 704],
+        [new Date('2023-11-11').getTime(), 758],
+        [new Date('2023-11-07').getTime(), 1127],
+        [new Date('2023-11-03').getTime(), 1599]
+      ]
+    },
+    // 白细胞数
+    {
+      name: '白细胞数(<8)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 193],
+        [new Date('2023-11-17').getTime(), 552],
+        [new Date('2023-11-15').getTime(), 829],
+        [new Date('2023-11-13').getTime(), 504],
+        [new Date('2023-11-11').getTime(), 358],
+        [new Date('2023-11-07').getTime(), 627],
+        [new Date('2023-11-03').getTime(), 1599]
+      ]
+    },
+    // 多核细胞
+    {
+      name: '多核细胞',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 32.1],
+        [new Date('2023-11-17').getTime(), 56.7],
+        [new Date('2023-11-15').getTime(), 59.9],
+        [new Date('2023-11-13').getTime(), 47.2],
+        [new Date('2023-11-11').getTime(), 24.3],
+        [new Date('2023-11-07').getTime(), 12.6],
+        [new Date('2023-11-03').getTime(), 89]
+      ]
+    },
+    // 单细胞
+    {
+      name: '单细胞',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 67.9],
+        [new Date('2023-11-17').getTime(), 43.3],
+        [new Date('2023-11-15').getTime(), 40.1],
+        [new Date('2023-11-13').getTime(), 52.8],
+        [new Date('2023-11-11').getTime(), 75.7],
+        [new Date('2023-11-07').getTime(), 87.4],
+        [new Date('2023-11-03').getTime(), 11]
+      ]
+    },
+    // 氯化物
+    {
+      name: '氯化物(118~132)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 112],
+        [new Date('2023-11-17').getTime(), 111],
+        [new Date('2023-11-15').getTime(), 109],
+        [new Date('2023-11-13').getTime(), 109],
+        [new Date('2023-11-11').getTime(), 111],
+        [new Date('2023-11-07').getTime(), 115],
+        [new Date('2023-11-03').getTime(), 118]
+      ]
+    },
+    // 糖
+    {
+      name: '糖(2.5~4.5)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 2.24],
+        [new Date('2023-11-17').getTime(), 2.07],
+        [new Date('2023-11-15').getTime(), 1.6],
+        [new Date('2023-11-13').getTime(), 1.76],
+        [new Date('2023-11-11').getTime(), 2.05],
+        [new Date('2023-11-07').getTime(), 3.16],
+        [new Date('2023-11-03').getTime(), 2.57]
+      ]
+    },
+    // 蛋白
+    {
+      name: '蛋白(15~45)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 73.9],
+        [new Date('2023-11-17').getTime(), 105.1],
+        [new Date('2023-11-15').getTime(), 110.2],
+        [new Date('2023-11-13').getTime(), 82.33],
+        [new Date('2023-11-11').getTime(), 88.6],
+        [new Date('2023-11-07').getTime(), 86.25],
+        [new Date('2023-11-03').getTime(), 130.47]
+      ]
+    },
+    // 乳酸
+    {
+      name: '乳酸(1.1~2.4)',
+      tooltip: {
+        show: true,
+        valueFormatter: function (value) {
+          return value;
+        }
+      },
+      type: 'line',
+      data: [
+        [new Date('2023-11-28').getTime(), 4.1],
+        [new Date('2023-11-17').getTime(), 7],
+        [new Date('2023-11-15').getTime(), 7],
+        [new Date('2023-11-13').getTime(), 6.6],
+        [new Date('2023-11-11').getTime(), 4.3],
+        [new Date('2023-11-07').getTime(), 4.6],
+        [new Date('2023-11-03').getTime(), 5.4]
+      ]
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+</script> 
+  
 <!-- MathJax -->
 
 <script type="text/x-mathjax-config">
